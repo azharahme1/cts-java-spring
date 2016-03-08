@@ -1,0 +1,140 @@
+
+
+ data-structures and Algorithms
+ -----------------------------------
+ 
+   organizing memory for data to do CRUDSS oprns using our programs
+   
+   
+   types
+   
+     1. primary
+     
+        e.g 
+        
+        int v=12;
+        
+        8 primitives 
+     
+     2. secondary
+     
+        a. linear
+        
+            array           : []
+            linkedlist
+            .....
+        
+        b. non-linear
+        
+            tree
+            graph
+            
+            ........
+            
+       ---------------------------------------------------------------   
+       
+       
+       e.g LinkedList
+       
+       
+         In C ,
+         
+         struct Node{
+         
+           // properties
+         
+         }  
+       
+         
+         in C++
+         
+         class Node{
+         
+         }
+         
+         using pointers create link b/w nodes
+         then write functions as algms ( add , delete , ... )
+         
+         
+         in Java,
+         
+         
+         
+          class Node{
+          //
+          }
+       
+          using obj's reference create link b/w nodes.
+       
+       
+       ------------------------------------------------------
+       
+       
+       from java community
+       
+       
+       defined/ready-made DS and Algm
+       
+       
+         " Collection"  F.W
+       
+       
+        collections --> group of objects , to do grouping operation
+        
+       ----------------------------------------------------
+       
+       
+       types of collections in java
+       
+       
+       a. List 
+       
+          --> ordered o/p
+          --> indexed
+          --> duplicates are allowed becoz of index
+       
+       b. Set
+       
+          --> No index
+          --> unique
+       
+       c. Map
+       
+          --> grouping elements with custom identity ( key )
+           
+         
+      ----------------------------------------------------
+       
+       implementations( classes ) of collection F.W ( java.util.* )
+       
+       
+       A. List
+          
+          a. Vector      ( array )  --> ( thread-safe )
+             i. Stack    ( array )  --> LIFO 
+          b. ArrayList   ( array )  --> fast for read
+          c. LinkedList  ( DLL   )  --> fast for insert/delete
+       
+       B. Set
+       
+          a. TreeSet    ( tree  )               --> natural order
+          b. HashSet    ( hashtable )           --> un-ordered
+          c. LinkedHashSet ( DLL + Hashtable )  --> ordered
+       
+       
+       C. Map
+       
+          key + value
+       
+       	   a. TreeMap    ( tree  )               --> natural order
+           b. HashMap    ( hashtable )           --> un-ordered
+           c. LinkedHashMap ( DLL + Hashtable )  --> ordered
+       
+           d. Hashtable                          --> thread-safe
+           
+           
+       
+       
+       
+       
+         
