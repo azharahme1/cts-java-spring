@@ -1,0 +1,100 @@
+
+
+java : Annotation
+-----------------
+
+
+  from JDK 1.5
+  
+  what ?
+  
+  comment/meta-data on java programming elements ( class , var , etc..) for
+  compiler/Runtime/code-generation-tools / F.W.
+  
+  why ?
+  
+  
+  
+   appln code = config/validation/init-code + B.L code
+   
+   
+   config-code
+   
+   1st gen    --> as java-code
+   2nd gen    --> as XML
+   3rd gen    --> as Annotation(s)
+   
+   
+   adv:
+   
+   --> simple to use
+   --> can place where we write our code
+   
+   --------------------------------------
+   
+   
+   
+   
+   
+   
+   Custom Annotation
+   -----------------
+   
+   
+   
+   Some-Vendor   e.g Apache
+  
+  
+         -> Container appln    e.g  WebContainer like Tomcat
+     
+           manage / process components  
+   
+   
+   Developer(s)
+   
+         -> Component(s)   e.g like Servlet & JSP
+   
+          
+   
+   
+     using XML , we will map components to container  e.g web.xml
+   
+     
+   
+   
+   
+   
+   -----------------------------------------
+   
+   
+   java - style of development
+   
+   
+   " component and Container "
+   
+   
+   1. java SE
+   
+      a. application    --> client-JRE
+      b. applet         --> browser-JRE
+      
+   2. Java EE
+   
+     a. web comp ( servlet , jsp )  --> web-container ( e.g Tomcat , jetty .... )
+     b. ejb comp                    --> EJB container   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
