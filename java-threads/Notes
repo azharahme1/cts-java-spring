@@ -1,0 +1,23 @@
+
+
+------------------------------
+
+ java.lang.Thread
+ java.lang.Runnable
+ 
+ -----------------------------
+ 
+ from JKD 1.5 / 1.6
+ 
+ Concurrency API ( jaba.util.concurrent.*)
+ 
+     
+-------------------------------------     
+
+
+     why we 'thread pools' ?
+     
+     
+     pool : fix number threads
+     
+-------------------------------------     
