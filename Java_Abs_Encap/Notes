@@ -1,0 +1,63 @@
+
+
+  
+  
+  obj
+  ----
+  
+    interface / Abstraction
+    implementation / Encapsulation
+    
+    
+     objs
+    
+       -> dependent
+       -> dependency  
+    
+    Abstraction:
+    
+    	why we need ?
+    
+        --> easy to use
+        --> easy to learn
+        --> for loose-coupling
+        
+    Encapsulation
+    
+        why we need ?    
+        
+        --> to hide implementation/complexity
+        --> for security reason
+        
+        
+        
+     --------------------------------------------------
+     
+     How to implement in Java - lang ?
+     
+     
+     many ways :
+     
+     --> using access-specifiers and packages
+     --> using class and interfaces
+     
+     
+         class     --> implementation/encapsulation
+         interface --> Abstraction
+        
+      ------------------------------------------------  
+        
+      e.g
+      
+        dependent  : Car : move()
+        dependency : MRFWheel : rotate();   
+         
+      ------------------------------------------------   
+         
+         
+         
+         
+         
+         
+         
+         

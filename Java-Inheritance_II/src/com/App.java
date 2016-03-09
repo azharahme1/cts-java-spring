@@ -1,0 +1,38 @@
+package com;
+
+import com.god.God;
+import com.live.Animal;
+import com.live.Human;
+import com.live.LivingThing;
+import com.live.Robot;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		// Init
+		God god = new God();
+
+		// Use
+
+		Human human = new Human();
+		Animal animal = new Animal();
+		Robot robot = new Robot();
+		
+		
+		// LivingThing live=new LivingThing();
+		// god.manageLT(live);
+		
+		
+
+		// god.manageHuman(human);
+		god.manageLT(human);
+		System.out.println();
+		// god.manageAnimal(animal);
+		god.manageLT(animal);
+		System.out.println();
+		god.manageLT(robot);
+
+	}
+
+}
