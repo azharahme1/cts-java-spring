@@ -1,0 +1,97 @@
+
+
+
+Exception Handling
+--------------------
+
+exception
+
+ -> un-exptected program flow disturb
+ 
+reason for exceptions :-
+
+ --> divide by zero
+ --> file not found ex..
+ --> IO prob
+  
+  ........................
+  
+  how to avoid exceptions ?
+  
+   by writing proper error conditions ......
+   
+    practically its very difficult to write..
+    
+  --------------------------------------------   
+  
+  what happen if exception happen?
+  
+  by default , JRE will terminate java-process.
+  
+  soln:
+  
+  by handling it , to continue the process
+  -----------------------------------------------
+  
+  How to handle exceptions ?
+  
+  using
+  
+      1. try,catch,finally
+      2. throws
+      3. throw
+      
+  ----------------------------------------------    
+  
+  adv Exception Handlers :-
+  
+   --> Separating Error-Handling Code from "Regular" Code
+   --> Propagating Errors Up the Call Stack
+   --> Grouping and Differentiating Error Types
+  
+  --------------------------------------------------
+  
+  
+   
+   
+   types of exception
+   
+   
+   a. checked exception
+   b. un-checked exception
+   
+   
+   
+   
+   ----------------------------------------
+   
+   
+   Throwable
+   
+      Exception   --> we can handle
+      Error       --> fatal
+   
+   
+   ----------------------------------------
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+  
+  
+  
+  
