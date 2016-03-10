@@ -5,15 +5,20 @@
 
 	<!-- <import resource="infra-layer.xml"/> -->
 
+
+	<!-- BPP -->
+	<bean class="com.mts.spring.BPP"></bean>
+
 	<bean id="accountRepo" class="com.mts.repository.JdbcAccountRepository">
 		<constructor-arg ref="dataSource" index="0" />
 	</bean>
 
-	<bean id="txrService" class="com.mts.service.TxrServiceImpl">
+	<bean id="txrService" class="com.mts.service.TxrServiceImpl"
+		init-method="init" destroy-method="destroy">
 		<constructor-arg>
 			<ref bean="accountRepo" />
 		</constructor-arg>
-		<property name="txrType" value="IMPS" />
+		<property name="txrType" value="NEFT" />
 	</bean>
 
 

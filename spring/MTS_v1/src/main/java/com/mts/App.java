@@ -11,7 +11,7 @@ public class App {
 
 		// init
 		ConfigurableApplicationContext applicationContext = null;
-		applicationContext = new ClassPathXmlApplicationContext("classpath:appln-layer.xml","infra-layer.xml");
+		applicationContext = new ClassPathXmlApplicationContext("classpath:appln-layer.xml", "infra-layer.xml");
 
 		System.out.println("----------------------------------------------------------");
 
@@ -20,7 +20,7 @@ public class App {
 		txrService.txr(1000.00, "1", "2");
 
 		System.out.println("----------------------------------------------------------");
-		
+
 		// destroy
 		applicationContext.close();
 

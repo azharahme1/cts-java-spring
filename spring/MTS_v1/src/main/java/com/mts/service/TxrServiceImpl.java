@@ -9,7 +9,7 @@ public class TxrServiceImpl implements TxrService {
 
 	private static final Logger logger = Logger.getLogger("MTS");
 
-	private String txrType = "NEFT"; // scalar property
+	private String txrType; // scalar property
 
 	private AccountRepository accountRepository; // bean
 
@@ -21,7 +21,21 @@ public class TxrServiceImpl implements TxrService {
 
 	public void setTxrType(String txrType) {
 		this.txrType = txrType;
-		logger.info("new txrType initialized -"+txrType);
+		logger.info("new txrType initialized -" + txrType);
+	}
+
+	public String getTxrType() {
+		return txrType;
+	}
+
+	public void init() {
+		System.out.println("txrService : init");
+		// this.txrType = "NEFT";
+	}
+
+	public void destroy() {
+		System.out.println("txrService : destroy");
+		// this.txrType = "NEFT";
 	}
 
 	@Override
