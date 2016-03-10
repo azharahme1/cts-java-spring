@@ -14,7 +14,6 @@ public class App {
 		
 		PriceMatrix priceMatrixV1 = new PriceMatrixImpl_v1();
 		PriceMatrix priceMatrixV2 = new PriceMatrixImpl_v2();
-
 		Billing billComp = new BillingImpl(priceMatrixV2);
 
 		// Use

@@ -1,0 +1,44 @@
+
+
+
+  MTS
+  -----
+  
+  usecase : txr(amount,fromAccount,toAccount)
+  
+  -----------------------------------------------
+  
+  domain/model (s )
+  
+   Account
+   
+         num
+         name
+         balance
+         type
+         staus
+   
+  ------------------------------------------------   
+  
+  common layer ( s)
+  
+  
+  1. Service Layer ( process )
+  
+  	a.TxrService
+  	b. 
+  
+  2. Data/Repository Layer ( persist )
+  
+    a.AccountRepository
+    b.
+  
+  ----------------------------------------------
+  
+  
+  
+  
+  
+  
+  
+      
