@@ -1,0 +1,39 @@
+
+
+  OO principle
+
+  Inversion of Control ( IOC )
+  -----------------------------
+  
+  
+  types of objects
+  -----------------
+  
+     a. dependent
+     b. dependency 
+     
+     how dependent should connect/use the dependency ?
+     
+     using IOC principle.
+     
+     ------------------
+     
+     
+     e.g
+     
+       Shop
+       
+          a. Billing : getTotalPrice(cart)  : dependent
+          b. PriceMatrix : getPrice(item)   : dependency
+          
+          
+     -------------------------------------------     
+          
+          
+          
+          
+          
+          
+          
+          
+          
