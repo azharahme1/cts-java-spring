@@ -1,18 +1,33 @@
 package com.mts.service;
 
+import org.apache.log4j.Logger;
+
 import com.mts.model.Account;
 import com.mts.repository.AccountRepository;
 
 public class TxrServiceImpl implements TxrService {
 
-	private AccountRepository accountRepository;
+	private static final Logger logger = Logger.getLogger("MTS");
+
+	private String txrType = "NEFT"; // scalar property
+
+	private AccountRepository accountRepository; // bean
 
 	public TxrServiceImpl(AccountRepository accountRepository) {
 		this.accountRepository = accountRepository;
+		logger.info("accountRepository injected to " + TxrServiceImpl.class.getName());
+		logger.info(TxrServiceImpl.class.getName() + " instance created...");
+	}
+
+	public void setTxrType(String txrType) {
+		this.txrType = txrType;
+		logger.info("new txrType initialized -"+txrType);
 	}
 
 	@Override
 	public void txr(double amount, String fromAccNum, String toAccNum) {
+
+		logger.info("txr - begin");
 
 		// load from & to Account(s)
 		Account fromAccount = accountRepository.load(fromAccNum);
@@ -24,6 +39,7 @@ public class TxrServiceImpl implements TxrService {
 		accountRepository.update(fromAccount);
 		accountRepository.update(toAccount);
 
+		logger.info("txr - completed");
 		// confirm
 
 	}
