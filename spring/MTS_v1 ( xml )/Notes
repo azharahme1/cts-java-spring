@@ -1,0 +1,79 @@
+
+
+
+  MTS
+  -----
+  
+  usecase : txr(amount,fromAccount,toAccount)
+  
+  -----------------------------------------------
+  
+  domain/model (s )
+  
+   Account
+   
+         num
+         name
+         balance
+         type
+         staus
+   
+  ------------------------------------------------   
+  
+  common layer ( s)
+  
+  
+  1. Service Layer ( process )
+  
+  	a.TxrService
+  	b. 
+  
+  2. Data/Repository Layer ( persist )
+  
+    a.AccountRepository
+    b.
+  
+  ----------------------------------------------
+  
+  
+  
+  Spring's Init-phase
+  --------------------
+  
+  
+    1. Loading bean definition
+    2. Executing BFPP
+    
+    3. bean instance will get created
+    4. dependency injection will happen
+    
+    on every bean instance
+    
+    5. BPP before 'init'
+    6. bean's init
+    7. BPP after 'init'
+    
+    ----------------------------
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      

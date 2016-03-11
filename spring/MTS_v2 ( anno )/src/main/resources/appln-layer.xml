@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+
+
+	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean> -->
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean> -->
+
+	<context:annotation-config />
+
+
+	<bean id="jdbcAccRepo1" class="com.mts.repository.JdbcAccountRepository">
+		<constructor-arg ref="dataSource" index="0" />
+		<qualifier type="com.mts.annotation.RepoSelector">
+			<attribute key="tech" value="jdbc"/>
+			<attribute key="database" value="mysql"/>
+		</qualifier>
+	</bean>
+	<bean id="jdbcAccRepo2" class="com.mts.repository.JdbcAccountRepository">
+		<constructor-arg ref="dataSource" index="0" />
+		<qualifier type="com.mts.annotation.RepoSelector">
+			<attribute key="tech" value="jdbc"/>
+			<attribute key="database" value="oracle"/>
+		</qualifier>
+	</bean>
+	
+	<bean id="hibAccRepo" class="com.mts.repository.HibernateAccountRepository">
+		<qualifier value="hibernate"/>
+	</bean>
+
+	<bean id="txrService" class="com.mts.service.TxrServiceImpl"
+		init-method="init" destroy-method="destroy">
+		<property name="txrType" value="NEFT" />
+	</bean>
+
+
+</beans>

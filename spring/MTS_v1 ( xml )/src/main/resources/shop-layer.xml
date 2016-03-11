@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="shopCart" class="com.shop.service.ShoppingCart" scope="prototype">
+	</bean>
+
+	<bean id="shopService" class="com.shop.service.ShoppingServiceImpl" scope="singleton">
+		<!-- <constructor-arg ref="shopCart" /> -->
+		<lookup-method name="getShoppingCart" bean="shopCart" />
+	</bean>
+
+</beans>

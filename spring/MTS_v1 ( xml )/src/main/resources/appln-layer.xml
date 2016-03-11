@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+	<!-- <import resource="infra-layer.xml"/> -->
+
+
+	<!-- BPP -->
+	<!-- <bean class="com.mts.spring.BPP"></bean> -->
+
+	<bean id="accountRepo" class="com.mts.repository.JdbcAccountRepository"
+		scope="prototype">
+		<constructor-arg ref="dataSource" index="0" />
+	</bean>
+
+	<bean id="txrService" class="com.mts.service.TxrServiceImpl"
+		init-method="init" destroy-method="destroy" 
+		p:txrType="NEFT"
+		c:accountRepository-ref="accountRepo">
+		<!-- <constructor-arg> -->
+		<!-- <ref bean="accountRepo" /> -->
+		<!-- </constructor-arg> -->
+		<!-- <property name="txrType" value="NEFT" /> -->
+	</bean>
+	<bean id="txrService2" class="com.mts.service.TxrServiceImpl"
+		init-method="init" destroy-method="destroy">
+		<constructor-arg>
+			<ref bean="accountRepo" />
+		</constructor-arg>
+		<property name="txrType" value="NEFT" />
+	</bean>
+
+	<util:set id="txrTypes">
+		<value>NEFT</value>
+		<value>IMPS</value>
+	</util:set>
+
+</beans>
