@@ -25,8 +25,10 @@ public class MTS_Config {
 
 	@Bean(name = "txrServ")
 	public TxrService getTxrServ() {
+		
 		TxrServiceImpl txrService = new TxrServiceImpl();
 		txrService.setAccountRepository(getAccRepo());
+		
 		return txrService;
 	}
 
