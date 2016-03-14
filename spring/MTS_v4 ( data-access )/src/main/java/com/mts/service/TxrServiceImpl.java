@@ -46,7 +46,7 @@ public class TxrServiceImpl implements TxrService {
 	}
 
 	// Join Point
-	@Transactional
+	@Transactional(transactionManager = "jdbcTxnManager")
 	@Override
 	public void txr(double amount, String fromAccNum, String toAccNum) {
 

@@ -21,12 +21,12 @@
 	</bean>
 
 	<!-- JDBC TxnManager -->
-	<bean id="transactionManager"
+	<bean id="jdbcTxnManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<tx:annotation-driven transaction-manager="jdbcTxnManager"/>
 
 
 </beans>
