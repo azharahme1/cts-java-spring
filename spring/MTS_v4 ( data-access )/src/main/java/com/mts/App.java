@@ -18,7 +18,8 @@ public class App {
 		// use
 		TxrService txrService = applicationContext.getBean("txrService", TxrService.class);
 		txrService.txr(1000.00, "1", "2");
-
+		System.out.println("Txr success");
+		
 		System.out.println("----------------------------------------------------------");
 
 		// destroy
