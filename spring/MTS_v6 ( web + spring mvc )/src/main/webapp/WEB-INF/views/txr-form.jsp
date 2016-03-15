@@ -42,6 +42,11 @@
 				</form>
 				
 			</div>
+			
+		</div>
+		
+		<div class="jumbotron">
+			<span class="">${message}</span>
 		</div>
 		
 	</div>
