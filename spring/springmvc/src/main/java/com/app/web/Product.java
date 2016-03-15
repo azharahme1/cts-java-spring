@@ -4,11 +4,14 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Product {
 
 	private int id;
+	@NotEmpty(message="Name is Required")
 	private String name;
 	private double price;
 	private String description;

@@ -1,6 +1,14 @@
 package com.app.web;
 
+import java.security.Principal;
+import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.MatrixVariable;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
+//@Controller
 public class DemoController {
 
 	// by HTTP-method
@@ -85,21 +93,44 @@ public class DemoController {
 
 	// ------------------
 
-	@RequestMapping(value = "/products", method = RequestMethod.POST,consumes="application/xml")
+	// Reading XML and JSON Data
+
+	@RequestMapping(value = "/products", method = RequestMethod.POST, consumes = { "application/xml","application/json" })
 	@ResponseBody
-	public String saveProductXML(@RequestBody Product product) {
-		System.out.println("accepting XML input....");
+	public String saveProduct(@RequestBody Product product) {
+		System.out.println("accepting XML/JSON input....");
 		System.out.println("POST: /products req handled....");
 		System.out.println(product);
 		return "success";
 	}
-	
-	@RequestMapping(value = "/products", method = RequestMethod.POST,consumes="application/json")
+
+
+	@RequestMapping(value = "/e", method = RequestMethod.GET)
 	@ResponseBody
-	public String saveProductJSON(@RequestBody Product product) {
-		System.out.println("accepting JSON input....");
-		System.out.println("POST: /products req handled....");
-		System.out.println(product);
+	public String handler6(HttpServletRequest req, HttpServletResponse resp, HttpSession session) {
+		System.out.println("GET: /e req handled....");
+		return "success";
+	}
+
+	@RequestMapping(value = "/f", method = RequestMethod.GET)
+	@ResponseBody
+	public String handler7(@CookieValue String JSESSIONID) {
+		System.out.println("GET: /f req handled....");
+		return "success";
+	}
+
+	@RequestMapping(value = "/g", method = RequestMethod.GET)
+	@ResponseBody
+	public String handler8(Locale locale) {
+		System.out.println("GET: /g req handled...." + locale.getLanguage());
+		return "success";
+	}
+
+	@RequestMapping(value = "/sec", method = RequestMethod.GET)
+	@ResponseBody
+	public String handler9(Principal principal) {
+		// System.out.println(principal.getName());
+		System.out.println("GET: /sec req handled....");
 		return "success";
 	}
 
