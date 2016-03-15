@@ -1,0 +1,12 @@
+
+
+Spring MVC
+-------------
+
+How to map request , to controller's method
+
+3-ways
+
+--> by http method
+--> by param value/presence
+--> by header value/presence
