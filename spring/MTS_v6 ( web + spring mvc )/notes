@@ -1,0 +1,45 @@
+
+
+
+  using Java Lang , to develope dynamic web-app,
+  
+  we use
+  
+    -> servlet , JSP
+    
+    -------------------------------------------
+    
+    Arch Pattern  --> MVC
+    
+    M --> Model
+    V --> View
+    C --> Controller
+    
+    ------------------------------------------
+    
+    JEE based MVC F.W
+    
+    
+    Request-Driven
+    --------------------
+    
+    1. struts 1.x   --> Apache  ( closed )
+    2. webwork      --> Open-Symphony    :-   --> struts 2.x   --> Apache
+    3. Spring MVC   --> springsource
+
+    Event Driven
+    -----------------
+
+    4. JSF ( java server faces )  --> java community
+    
+       Richfaces
+       Ucefaces
+       Oracle ADF
+       PrimeFaces
+       
+    5. Tapestry
+    
+   --------------------------------------------------     
+    
+           
+    

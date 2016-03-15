@@ -30,6 +30,11 @@ public class TxrServlet extends HttpServlet {
 		applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(config.getServletContext());
 	}
 
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.getRequestDispatcher("txr-form.jsp").forward(req, resp);
+	}
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -43,9 +48,8 @@ public class TxrServlet extends HttpServlet {
 		txrService.txr(Double.parseDouble(amount), fromAccNum, toAccNum);
 
 		// response...
-		PrintWriter out = response.getWriter();
-		out.println("Txr success");
-		out.close();
+		request.setAttribute("status", "Txr success");
+		request.getRequestDispatcher("txr-status.jsp").forward(request, response);
 
 	}
 
