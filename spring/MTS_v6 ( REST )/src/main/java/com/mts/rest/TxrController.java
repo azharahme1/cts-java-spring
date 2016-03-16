@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mts.exeception.BalanceException;
 import com.mts.service.TxrService;
 
-@Controller
+//@Controller
 @RestController
 public class TxrController {
 

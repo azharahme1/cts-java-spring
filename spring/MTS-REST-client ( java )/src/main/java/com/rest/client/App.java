@@ -1,5 +1,8 @@
 package com.rest.client;
 
+import java.net.URI;
+
+import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,7 +24,7 @@ public class App {
 		request.setAmount(amount);
 
 		RestTemplate restTemplate = new RestTemplate();
-		
+
 		ResponseEntity<TxrResponse> response = restTemplate.postForEntity(uri, request, TxrResponse.class);
 		System.out.println(response.getBody().getMessage());
 
