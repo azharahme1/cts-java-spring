@@ -1,0 +1,18 @@
+
+
+
+
+  REST API
+  -----------
+  
+  
+  GET /accounts
+  GET /accounts/{id}
+  
+  POST /txr
+  
+  representation(s)
+  
+  XML or JSON
+  
+  ----------------------------------
